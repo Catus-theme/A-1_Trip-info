@@ -1,0 +1,39 @@
+header#navigation.navbar-fixed-top
+  .container
+    .navbar-header
+      // responsive nav button 
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      // /responsive nav button 
+      // logo 
+      h1.navbar-brand
+        a(href='/')
+          img.default(src='public/img/logo.png', alt='Catus Logo')
+    // main nav 
+    nav.collapse.navigation.navbar-collapse.navbar-right(role='navigation')
+      ul#nav.nav.navbar-nav
+        if(url=='/')
+          li.current
+            a(href='/') Home
+          li
+            a(href='/about') About 
+          li
+            a(href='/contact') Contact 
+        if(url=='/about')
+          li
+            a(href='/') Home
+          li.current
+            a(href='/about') About
+          li
+            a(href='/contact') Contact 
+        if(url=='/contact')
+          li
+            a(href='/') Home
+          li
+            a(href='/about') About 
+          li.current
+            a(href='/contact') Contact 
+        

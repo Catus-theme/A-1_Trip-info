@@ -1,0 +1,16 @@
+extends ./template/layout.pug
+
+block title
+  title :: CATUS TRIP ::
+block append font
+block append css
+block append js
+block append header
+block section
+  if(url=='/')
+    include ./include/home.pug
+  if(url=='/about')
+    include ./include/portfolio.pug
+  if(url=='/contact')
+    include ./include/contact.pug
+block append footer
